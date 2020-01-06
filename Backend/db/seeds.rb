@@ -14,6 +14,7 @@
 alex = User.create(name: 'Alex')
 alex2 = User.create(name: 'alex2')
 gorilla = Coin.create(name: 'Gorilla', ticker: 'GOR', price:100000, rank:1)
+gorilla2 = Coin.create(name: 'Gorilla2', ticker: 'GOR2', price:10000, rank:2010)
 
 currencies_ticker_url = 'https://api.nomics.com/v1/currencies/ticker?key=4b84f1a1a7f47f9dd686e342ef6af4a4&ids=BTC,ETH,XRP,USDT,BCH,LTC,EOS,BNB,BSV,XLM,XTC,TRX,ADA,ATOM,LEO,XMR,HT,LINK,NEO,MIN,USDC,ETC,IOT,CRO,MKR,DASH,DOGE,OMG,BTT,STRAT&interval=1d,30d&convert=EUR'
 
@@ -26,4 +27,5 @@ currencies_ticker_data.each{|coin|
 
 Ownership.create(user: alex, coin: gorilla)
 Ownership.create(user: alex2, coin: gorilla)
+Ownership.create(user: alex2, coin: gorilla2)
 

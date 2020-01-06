@@ -29,7 +29,7 @@ class OwnershipsController < ApplicationController
     private
 
     def ownership_params
-        params.permit(:user_id, :coin_id)
+        params.permit(:user_id, :coin_id, :amount)
     end
 
 end
